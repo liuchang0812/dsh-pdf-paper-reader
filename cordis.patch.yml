@@ -1,0 +1,4 @@
+- insert:
+    - id: pdf-paper-reader
+      name: '@local/pdf-paper-reader'
+      config: {}

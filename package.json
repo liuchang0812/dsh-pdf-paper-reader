@@ -1,0 +1,60 @@
+{
+  "name": "@local/pdf-paper-reader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PDF paper reader plugin for the DeepSeek Harness Web UI: rendered papers with selectable text, AI translation and explanation, structured reading notes, and agent tools that read and search papers.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuchang0812/dsh-pdf-paper-reader.git"
+  },
+  "homepage": "https://github.com/liuchang0812/dsh-pdf-paper-reader",
+  "bugs": {
+    "url": "https://github.com/liuchang0812/dsh-pdf-paper-reader/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "pdf",
+    "paper-reader",
+    "pdfjs",
+    "research",
+    "notes"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "index.js",
+    "lib/**/*.cjs",
+    "lib/**/*.js",
+    "locale/*.json",
+    "vendor/*"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

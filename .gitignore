@@ -1,0 +1,4 @@
+node_modules/
+.tmp-route-check/
+*.log
+.DS_Store

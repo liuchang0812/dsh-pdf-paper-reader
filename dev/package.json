@@ -1,0 +1,17 @@
+{
+  "name": "@local/pdf-paper-reader-dev",
+  "private": true,
+  "type": "module",
+  "description": "Development-only dependencies for the PDF paper reader checks (not needed by plugin users).",
+  "scripts": {
+    "check:route": "node route-check.mjs",
+    "check:ssr": "node ssr-check.mjs",
+    "check:dom": "node dom-check.mjs",
+    "check": "node route-check.mjs && node ssr-check.mjs && node dom-check.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "24.1.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
