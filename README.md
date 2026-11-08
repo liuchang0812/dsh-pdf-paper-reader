@@ -1,5 +1,7 @@
 # PDF paper reader — a DeepSeek Harness Web UI plugin
 
+[![checks](https://github.com/liuchang0812/dsh-pdf-paper-reader/actions/workflows/check.yml/badge.svg)](https://github.com/liuchang0812/dsh-pdf-paper-reader/actions/workflows/check.yml)
+
 Read English computer-science papers inside the Harness Web UI: rendered PDF
 pages with selectable text, one-click AI translation/explanation, structured
 reading notes that are grounded in the paper, and agent tools that let the chat
@@ -55,6 +57,10 @@ locale and layout, and every AI call uses the model configured in your profile.
 ```bash
 git clone https://github.com/liuchang0812/dsh-pdf-paper-reader.git
 ```
+
+The repository root **is** the plugin bundle: `package.json` carries the
+`dsh.bundle.patch` and `dsh.client` declarations, and the plugin installs
+straight from that directory. No build step is needed.
 
 ### 2. Install the bundle into your profile
 
